@@ -1,4 +1,3 @@
-// app/layout.tsx
 import './globals.css'
 import { Inter } from 'next/font/google'
 import { ClerkProvider } from '@clerk/nextjs'
@@ -16,12 +15,12 @@ export default function RootLayout({
     children: React.ReactNode
 }) {
     return (
-        <html lang="en">
-            <ClerkProvider>
+        <ClerkProvider>
+            <html lang="en">
                 <body className={inter.className}>{children}
 
                 </body>
-            </ClerkProvider>
-        </html>
+            </html>
+        </ClerkProvider>
     )
 }
